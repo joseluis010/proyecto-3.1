@@ -1,7 +1,7 @@
 from django.contrib import admin
 from .models import Pais, Ciudad, Calle
 
-
+# esto debo cambiarlo por la filmina 18 pagina 49
 
 class PaisAdmin(admin.ModelAdmin):
     list_display = ('nombre',)

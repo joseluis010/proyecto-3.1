@@ -2,6 +2,11 @@ from django.shortcuts import render, redirect
 from .models import Pais, Ciudad, Calle
 from .forms import AgregarInformacionForm, BuscarForm
 
+
+def index(request):
+    return render(request, 'index.html')
+
+
 def agregar_informacion(request):
     if request.method == 'POST':
         form = AgregarInformacionForm(request.POST)
@@ -14,7 +19,7 @@ def agregar_informacion(request):
             ciudad_obj, created = Ciudad.objects.get_or_create(nombre=ciudad, pais=pais_obj)
             Calle.objects.create(nombre=calle, ciudad=ciudad_obj)
 
-            return redirect('agregar_informacion')
+            return redirect('agregar')
     else:
         form = AgregarInformacionForm()
 

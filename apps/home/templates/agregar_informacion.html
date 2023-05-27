@@ -4,8 +4,12 @@
 Agregar Información
 {% endblock %}
 
+
+
 {% block content %}
 <h1>Agregar Información</h1>
+<a href="{% url 'home:index' %}" class="btn btn-primary">Volver a Inicio</a>
+<br><br>
 <form method="post">
     {% csrf_token %}
     {{ form.as_p }}

@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Búsqueda
+{% endblock %}
+
+
+
+
+{% block content %}
+<h1>Búsqueda</h1>
+<a href="{% url 'home:index' %}" class="btn btn-primary">Volver a Inicio</a>
+<br><br>
+<form method="post">
+    
+    {% csrf_token %}
+    {{ form.pais.label_tag }}
+    {{ form.pais }}
+    <br><br>
+    {{ form.ciudad.label_tag }}
+    {{ form.ciudad }}
+    <br>
+    <button type="submit">Buscar</button>
+</form>
+
+{% if calles %}
+    <h2>Resultados de la búsqueda:</h2>
+    <ul>
+        {% for calle in calles %}
+            <li>{{ calle.nombre }}</li>
+        {% empty %}
+            <li>No se encontraron calles</li>
+        {% endfor %}
+    </ul>
+{% endif %}
+{% endblock %}

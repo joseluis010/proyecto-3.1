@@ -7,8 +7,25 @@
     <title>Pre-entrega3</title>
 </head>
 <body>
-    <div style="text-align: center;"> {% block content %}
-    {% endblock %}
+    <div style="text-align: center;"> 
+        {% block content %}
+
+
+            {% if messages %}
+                <ul class="messages">
+            {% for message in messages %}
+            <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+            {% endfor %}
+            </ul>
+            {% endif %}
+
+        {% endblock %}
     </div>
+
+    <div style="text-align: center;">
+        <footer>
+            {% include 'footer.html' %}
+        </footer>
+    </div>  
 </body>
 </html>

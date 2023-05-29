@@ -16,6 +16,7 @@ class Ciudad(models.Model):
 class Calle(models.Model):
     nombre = models.CharField(max_length=100)
     ciudad = models.ForeignKey(Ciudad, on_delete=models.CASCADE)
+    pais = models.ForeignKey(Pais, on_delete=models.CASCADE)
 
     def __str__(self):
         return self.nombre

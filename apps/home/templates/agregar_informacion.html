@@ -1,13 +1,11 @@
 {% extends 'base.html' %}
 
-{% block title %}
-Agregar Información
-{% endblock %}
+
 
 
 
 {% block content %}
-<h1>Agregar Información</h1>
+<h1 style="color: brown;">Agregar Información</h1>
 <a href="{% url 'home:index' %}" class="btn btn-primary">Volver a Inicio</a>
 <br><br>
 <form method="post">
@@ -15,4 +13,15 @@ Agregar Información
     {{ form.as_p }}
     <button type="submit">Agregar</button>
 </form>
-{% endblock %}
+ <br><br>
+ 
+{% if messages %}
+<div class="alert alert-danger mt-3">
+    <ul>
+        {% for message in messages %}
+        <li>{{ message }}</li>
+        {% endfor %}
+    </ul>
+</div>
+{% endif %}
+{% endblock content %}

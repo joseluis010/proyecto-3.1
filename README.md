@@ -96,5 +96,8 @@ urlpatterns = [
 ## Cosas a mejorar
 
 - me hubiera gustado agregarle una plantilla de Bootstrap, pero no comprendí bien esa área, cuando intentaba hacer cambios me daba error mi programa, por eso es que no lo continué.
+
 - La parte de formularios me costó bastante entender, tanto el código que hay que agregar en el html como en el controlador.
 Hubo mucho de copia y pego y aún intentando buscar la info, no he logrado entenderlo.
+
+- Me costó entender como usar estilos en un archivo .py y .html, algunos pude usar pero buscando info en otras fuentes.

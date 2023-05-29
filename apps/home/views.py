@@ -46,7 +46,10 @@ def buscar(request):
             ciudad = form.cleaned_data['ciudad']
             
             calles = Calle.objects.filter(ciudad__nombre=ciudad, ciudad__pais__nombre=pais)
-            return render(request, 'buscar.html', {'calles': calles})
+            if calles:
+                return render(request, 'buscar.html', {'calles': calles})
+            else:
+                messages.info(request, 'No se encontraron calles en la ciudad buscada.')
         
     else:
         form = BuscarForm()

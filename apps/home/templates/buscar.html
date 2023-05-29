@@ -18,6 +18,16 @@
     <button type="submit">Buscar</button>
 </form>
 
+<!-- Mensaje si no hay calle en esa ciudad -->
+{% if messages %}
+    <ul class="messages">
+        {% for message in messages %}
+            <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+        {% endfor %}
+    </ul>
+{% endif %}
+
+
 {% if calles %}
     <h3>Resultados de la búsqueda:</h3>
     <ul>

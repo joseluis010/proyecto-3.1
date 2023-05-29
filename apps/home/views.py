@@ -29,7 +29,7 @@ def agregar_informacion(request):
                 # messages.success(request, 'Información agregada exitosamente.')  # Mensaje de éxito
                 # return redirect('home:agregar')
             else:
-                messages.error(request, 'La calle ya fue creada.')  # Mensaje de error
+                messages.error(request, 'La calle ya existe.')  # Mensaje de error
     else:
         form = AgregarInformacionForm()
 

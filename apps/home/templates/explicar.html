@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<h1>  Baños Públicos  </h1>
+<h3> Este proyecto es una aplicación web para buscar y agregar información sobre baños públicos en diferentes ciudades. <br>  Permite a los usuarios encontrar baños cercanos y agregar nuevos baños a la base de datos.
+</h3>
+<h2> Características</h2>
+
+<h3> - Búsqueda de baños:</h3> Los usuarios pueden buscar baños públicos en una ciudad específica. La búsqueda se realiza por país y ciudad, y muestra los resultados de la dirección de los baños encontrados en la ciudad seleccionada.
+
+<h3>- Agregar información:</h3> Los usuarios pueden agregar nuevos baños públicos a la base de datos. Deben proporcionar información como país, ciudad y dirección del baño.
+
+<h3> - Validación de datos:</h3> El sistema valida los datos ingresados por los usuarios para garantizar la integridad de la información. Se verifican campos obligatorios y se realizan comprobaciones adicionales para asegurarse de que los datos sean válidos y consistentes.
+
+<h3> - Mensajes de retroalimentación:</h3> Se utilizan mensajes de retroalimentación para informar a los usuarios sobre el resultado de sus acciones. Los mensajes pueden ser de éxito, error o información, y se muestran en la interfaz de usuario para proporcionar una mejor experiencia de uso.
+<br><br>
+<a href="{% url 'home:index' %}" >Volver a Inicio</a>
+{% endblock content %}

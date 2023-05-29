@@ -6,6 +6,8 @@ from .forms import AgregarInformacionForm, BuscarForm
 
 def index(request):
     return render(request, 'index.html')
+def explicar(request):
+    return render(request, 'explicar.html')
 
 
 def agregar_informacion(request):

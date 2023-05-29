@@ -75,9 +75,26 @@ urlpatterns = [
 º si la calle no existe la crea y devuelve un mensaje de que fue creado y refresca la pagina
     º si la calle ya existe nos devuelve un mensaje de que la calle ya existe y no refresca la pagina, nos permite ver si el error fue de tipeo.
 
-- En apps/home/views.py tenemos 3 funciones una para mostrar el index y otras 2 para agregar informacion sobre los baños y para buscar calles que tengan baños 
+- En apps/home/views.py tenemos 4 funciones una para mostrar el index, la explicacion del programa y otras 2 para agregar informacion sobre los baños y para buscar calles que tengan baños 
   
   º nos pide agregar el país y la ciudad, si hay calles creadas nos muestra todas.
     º si no hay calles creadas nos devuelve un mensaje de que no se encontraron calles    
 
-- En     
+- En apps/home/admin.py     
+    creo los campos en admin: Pais, Ciudad y Calle
+    en el superusercreate pusimos: admin y pass: 1234
+
+
+- Tengo 6 templates
+º base.html 
+º index.html
+º explicar.html
+º footer.html
+º agregar_informacion.html
+º buscar.html
+
+## Cosas a mejorar
+
+- me hubiera gustado agregarle una plantilla de Bootstrap, pero no comprendí bien esa área, cuando intentaba hacer cambios me daba error mi programa, por eso es que no lo continué.
+- La parte de formularios me costó bastante entender, tanto el código que hay que agregar en el html como en el controlador.
+Hubo mucho de copia y pego y aún intentando buscar la info, no he logrado entenderlo.
